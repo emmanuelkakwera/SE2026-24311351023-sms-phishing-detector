@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mg_background">#F5F8FD</color>
+    <color name="mg_dark_background">#08152E</color>
+    <color name="mg_primary">#0B2A5B</color>
+    <color name="mg_fraud_red">#B3261E</color>
+    <color name="ic_launcher_background">#0B2A5B</color>
+</resources>

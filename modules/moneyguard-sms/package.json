@@ -1,0 +1,10 @@
+{
+  "name": "moneyguard-sms",
+  "version": "0.1.0",
+  "description": "Automatic incoming SMS phishing detection for MoneyGuard Malawi.",
+  "main": "src/index.ts",
+  "private": true,
+  "peerDependencies": {
+    "expo": "*"
+  }
+}

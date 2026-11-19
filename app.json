@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "MoneyGuard",
+    "slug": "moneyguard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "moneyguard",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F3F6F4",
+    "description": "Offline mobile money SMS phishing and fraud detection for Malawi.",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moneyguard.malawi",
+      "icon": "./assets/images/icon.png"
+    },
+    "android": {
+      "package": "com.moneyguard.malawi",
+      "versionCode": 1,
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.RECEIVE_SMS",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#176B4B",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#176B4B",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 112,
+          "dark": {
+            "backgroundColor": "#0E1512",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#176B4B",
+          "defaultChannel": "moneyguard-alerts"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
