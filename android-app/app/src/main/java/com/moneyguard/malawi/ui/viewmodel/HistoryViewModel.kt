@@ -47,6 +47,18 @@ class HistoryViewModel(
         filter.value = value
     }
 
+    fun deleteDetection(id: String) {
+        viewModelScope.launch {
+            detectionRepository.deleteDetection(id)
+        }
+    }
+
+    fun pruneOlderThan(cutoffTimestampMillis: Long) {
+        viewModelScope.launch {
+            detectionRepository.deleteOlderThan(cutoffTimestampMillis)
+        }
+    }
+
     fun clearHistory() {
         viewModelScope.launch {
             detectionRepository.clearHistory()
