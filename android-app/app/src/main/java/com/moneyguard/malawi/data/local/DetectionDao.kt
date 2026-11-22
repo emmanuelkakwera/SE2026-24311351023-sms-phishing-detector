@@ -35,6 +35,12 @@ interface DetectionDao {
         return false
     }
 
+    @Query("DELETE FROM detections WHERE id = :id")
+    suspend fun deleteById(id: String)
+
+    @Query("DELETE FROM detections WHERE timestampMillis < :cutoffTimestampMillis")
+    suspend fun deleteOlderThan(cutoffTimestampMillis: Long): Int
+
     @Query("DELETE FROM detections")
     suspend fun clearAll()
 }

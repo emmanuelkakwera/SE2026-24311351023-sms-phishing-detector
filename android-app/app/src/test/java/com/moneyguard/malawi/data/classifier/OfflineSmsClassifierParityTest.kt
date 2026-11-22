@@ -130,6 +130,9 @@ class OfflineSmsClassifierParityTest {
     private companion object {
         // Gradle runs local unit tests with the module directory as working dir.
         val modelFile = File("../../assets/model/moneyguard_model.json")
-        val fixturesFile = File("../../../tests/mobile_parity_fixtures.json")
+        val fixturesFile = listOf(
+            File("../../../tests/mobile_parity_fixtures.json"),
+            File("../../tests/mobile_parity_fixtures.json")
+        ).firstOrNull { it.exists() } ?: File("../../../tests/mobile_parity_fixtures.json")
     }
 }

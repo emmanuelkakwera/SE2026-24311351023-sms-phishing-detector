@@ -1,0 +1,78 @@
+{
+  "sourceModel": "assets/model/moneyguard_model.json",
+  "caseCount": 12,
+  "cases": [
+    {
+      "id": "fraud_airtel_pin_reset",
+      "message": "URGENT: Your Airtel Money account will be blocked today. Reply with your 4-digit PIN to verify now.",
+      "expectedLabel": "fraud",
+      "expectedFraudProbability": 0.7550042726780645
+    },
+    {
+      "id": "fraud_mpamba_reversal",
+      "message": "TNM Mpamba: You received MK 45,000 by mistake from 0888123456. Send back immediately or your line is suspended.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.3828605473316078
+    },
+    {
+      "id": "fraud_chichewa_agent",
+      "message": "Airtel Money: Mwapambana MK 150,000 pa promotion! Tumizani PIN yanu kapena imbani 0999000111 kuti mulandire.",
+      "expectedLabel": "fraud",
+      "expectedFraudProbability": 0.7512801223308418
+    },
+    {
+      "id": "fraud_otp_harvest",
+      "message": "Security Alert: Enter your Airtel Money OTP code 4829 at http://airtel-mw-verify.example.com to unlock wallet.",
+      "expectedLabel": "fraud",
+      "expectedFraudProbability": 0.6405645288840174
+    },
+    {
+      "id": "fraud_mpamba_prize",
+      "message": "Congratulations! Your TNM Mpamba number won MK 200,000. Send MK 5,000 processing fee to agent 0881223344.",
+      "expectedLabel": "fraud",
+      "expectedFraudProbability": 0.7608063070994366
+    },
+    {
+      "id": "fraud_chichewa_block",
+      "message": "Chenjezo: Akaunti yanu ya Mpamba itsekedwa lero. Tumizani nambala ya chinsinsi PIN kuti mutsegule.",
+      "expectedLabel": "fraud",
+      "expectedFraudProbability": 0.5934821170491112
+    },
+    {
+      "id": "normal_airtel_cashin",
+      "message": "Trans ID: CI261120.1105.A12345. You have received MK 15,000.00 from 0999123456 CHIKONDI BANDA. Bal: MK 28,500.00.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.30593329230598176
+    },
+    {
+      "id": "normal_mpamba_transfer",
+      "message": "Ref: MP261120.0940.B98765. Confirmed. MK 8,500.00 sent to GRACE PHIRI 0888765432. Fee MK 150.00. Bal MK 12,350.00.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.40148304020563796
+    },
+    {
+      "id": "normal_airtel_airtime",
+      "message": "You have bought MK 1,000.00 Airtel airtime for 0998112233. Trans ID: AT261120.1412.C54321. New balance: MK 9,400.00.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.35373532562131826
+    },
+    {
+      "id": "normal_mpamba_utility",
+      "message": "Payment of MK 22,000.00 to ESCOM Prepaid successful. Token: 1234-5678-9012-3456-7890. Ref: UT261120.1605.D11223.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.3887170540036049
+    },
+    {
+      "id": "normal_bank_alert",
+      "message": "Dear Customer, your salary of MK 350,000.00 has been credited to your account ending 4421 on 20-Nov-2026.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.46739195192017935
+    },
+    {
+      "id": "normal_personal_sms",
+      "message": "Moni bro, ndafika ku Lilongwe bwino. Tikumana mawa pa 10 koloko ku Town.",
+      "expectedLabel": "normal",
+      "expectedFraudProbability": 0.35471299861883554
+    }
+  ]
+}

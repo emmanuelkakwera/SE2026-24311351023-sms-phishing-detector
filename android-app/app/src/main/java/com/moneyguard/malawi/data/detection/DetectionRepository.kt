@@ -14,5 +14,7 @@ interface DetectionRepository {
      * Returns true when a new record was written.
      */
     suspend fun recordDetectionOnce(record: DetectionRecord): Boolean
+    suspend fun deleteDetection(id: String)
+    suspend fun deleteOlderThan(cutoffTimestampMillis: Long): Int
     suspend fun clearHistory()
 }
