@@ -21,6 +21,13 @@ class RoomDetectionRepository(
     override suspend fun recordDetectionOnce(record: DetectionRecord): Boolean =
         dao.insertIfNew(DetectionEntity.fromDomain(record))
 
+    override suspend fun deleteDetection(id: String) {
+        dao.deleteById(id)
+    }
+
+    override suspend fun deleteOlderThan(cutoffTimestampMillis: Long): Int =
+        dao.deleteOlderThan(cutoffTimestampMillis)
+
     override suspend fun clearHistory() {
         dao.clearAll()
     }
