@@ -1,0 +1,8 @@
+﻿flowchart LR
+  User[Mobile Money User] -- SMS --> OS[Android Telephony]
+  OS --> Chain[SmsWarningChain VS1: Rules + ML]
+  Chain --> UI[Compose UI & Room DB]
+  UI -- Consented Report --> Queue[ReportReviewQueue VS2]
+  Pkg[Signed Update Pkg] --> Proxy[SignedUpdateProxy VS3]
+  Proxy --> Applier[DeviceUpdateApplier]
+  %% Footer: Emmanuel Noel Kakwera (24311351023) | Token: EK23-WKBD-MF26
